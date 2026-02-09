@@ -32,7 +32,10 @@ if site.data.about.rewardList && site.data.about.award.enable
                                     - var rewards = theme.post.award.list
                                     each reward in rewards
                                         li.reward-item
-                                            a(href=url_for(reward.url))
+                                            if reward.url
+                                                a(href=url_for(reward.url))
+                                                    img.post-qr-code-img(alt=reward.name, src=reward.qcode, style="border-color:" + reward.color)
+                                            else
                                                 img.post-qr-code-img(alt=reward.name, src=reward.qcode, style="border-color:" + reward.color)
                                             .post-qr-code-desc= reward.name
             .reward-list-tips

@@ -910,7 +910,7 @@ recent_comments:
   enable: false
   limit: 50 # ⚠️waline 仅支持最大50条评论 / ⚠️waline only supports a maximum of 50 comments
   cache: 0.2 # 1 = 1天 / 1 = 1 day
-  page: /recentcomments/ # 最近评论页面 / recent comments page
+  page: /recentcomment/ # 最近评论页面 / recent comments page
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------

@@ -9,7 +9,10 @@
                 - let list = theme.post.award.list || []
                 for item in list
                     li.reward-item
-                        a(href=url_for(item.url))
+                        if item.url
+                            a(href=url_for(item.url))
+                                img.post-qr-code-img.nolazyload(src=item.qcode, alt=item.name, style="border-color: " + item.color)
+                        else
                             img.post-qr-code-img.nolazyload(src=item.qcode, alt=item.name, style="border-color: " + item.color)
                         .post-qr-code-desc=item.name
             a.reward-main-btn(href=url_for(theme.post.award.appreciators))

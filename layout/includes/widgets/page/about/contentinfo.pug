@@ -2,7 +2,7 @@
 
 if contentinfo
     .author-content
-        .author-content-item.myInfoAndWittyWord
+        .author-content-item.myInfoAndWittyWord(style=contentinfo.bg ? `background: ${contentinfo.bg};` : '')
             .title1= contentinfo.sup
             .title2
                 span.inline-word= contentinfo.name
